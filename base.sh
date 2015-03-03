@@ -5,7 +5,7 @@ sudo -i
 HOST_NAME=""
 UCD_HOST=""
 UCD_IP=""
-JRE_PATH=""
+JRE_PATH="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.75.x86_64/jre"
 
 # disable iptables (this is just a demo so it's ok)
 chkconfig iptables off
@@ -18,7 +18,7 @@ echo -e $UCD_IP"\t"$UCD_HOST >> /etc/hosts
 # install java
 #mkdir -p /opt/IBM
 #tar -xvf /vagrant/ibm-java*x86_64.tgz -C /opt/IBM
-export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.75.x86_64/jre
+export JAVA_HOME=$JRE_PATH
 #export JAVA_HOME=$JRE_PATH
 
 yum upgrade -y
